@@ -62,7 +62,7 @@ export default function App() {
 
       let location = await Location.getCurrentPositionAsync({})
       let { latitude, longitude } = location.coords
-      const API_KEY = '826d7a44b198cf8c95e55967b086ae22'
+      const API_KEY = 'YOUR_API_KEY'
       setLoading(true)
       const { data } = await axios.get(
         `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
